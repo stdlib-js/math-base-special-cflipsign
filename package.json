@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-cflipsign",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Return a complex number with the same magnitude as `z` and the sign of `y*z`.",
   "license": "Apache-2.0",
   "author": {
