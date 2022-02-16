@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-cflipsign",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Return a double-precision complex floating-point number with the same magnitude as `z` and the sign of `y*z`.",
   "license": "Apache-2.0",
   "author": {
