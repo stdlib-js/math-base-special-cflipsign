@@ -227,8 +227,8 @@ int main() {
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/math/base/ops/cneg`][@stdlib/math/base/ops/cneg]</span><span class="delimiter">: </span><span class="description">negate a complex number.</span>
--   <span class="package-name">[`@stdlib/math/base/special/csignum`][@stdlib/math/base/special/csignum]</span><span class="delimiter">: </span><span class="description">evaluate the signum function of a complex number.</span>
+-   <span class="package-name">[`@stdlib/math-base/ops/cneg`][@stdlib/math/base/ops/cneg]</span><span class="delimiter">: </span><span class="description">negate a complex number.</span>
+-   <span class="package-name">[`@stdlib/math-base/special/csignum`][@stdlib/math/base/special/csignum]</span><span class="delimiter">: </span><span class="description">evaluate the signum function of a complex number.</span>
 
 </section>
 
