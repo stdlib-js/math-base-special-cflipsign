@@ -34,14 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-cflipsign
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@esm/index.mjs';
+var cflipsign = require( '@stdlib/math-base-special-cflipsign' );
 ```
 
 #### cflipsign( z, y )
@@ -49,9 +65,9 @@ import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-c
 Returns a double-precision complex floating-point number with the same magnitude as `z` and the sign of `y*z`.
 
 ```javascript
-import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
-import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@esm/index.mjs';
-import imag from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imag@esm/index.mjs';
+var Complex128 = require( '@stdlib/complex-float64' );
+var real = require( '@stdlib/complex-real' );
+var imag = require( '@stdlib/complex-imag' );
 
 var v = cflipsign( new Complex128( -4.2, 5.5 ), -1.0 );
 // returns <Complex128>
@@ -83,15 +99,10 @@ var im = imag( v );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
-import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
-import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@esm/index.mjs';
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' ).factory;
+var Complex128 = require( '@stdlib/complex-float64' );
+var cflipsign = require( '@stdlib/math-base-special-cflipsign' );
 
 var rand = uniform( -50.0, 50.0 );
 
@@ -103,10 +114,6 @@ for ( i = 0; i < 100; i++ ) {
     y = rand();
     console.log( 'cflipsign(%s, %d) = %s', z, y, cflipsign( z, y ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -115,7 +122,94 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/cflipsign.h"
+```
+
+#### stdlib_base_cflipsign( z, y )
+
+Returns a double-precision complex floating-point number with the same magnitude as `z` and the sign of `y*z`.
+
+```c
+#include <complex.h>
+
+double complex y = stdlib_base_cflipsign( 2.5-1.5*I, -1.0 );
+// returns -2.5+1.5*I
+```
+
+The function accepts the following arguments:
+
+-   **z**: `[in] double complex` input value.
+-   **y**: `[in] double` number from which to derive the sign.
+
+```c
+double complex stdlib_base_cflipsign( const double complex z, const double y );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/cflipsign.h"
+#include <stdio.h>
+#include <complex.h>
+
+int main() {
+    double complex x[] = { 3.14+1.5*I, -3.14-1.5*I, 0.0+0.0*I, 0.0/0.0+0.0/0.0*I };
+
+    double complex v;
+    double complex y;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = x[ i ];
+        y = stdlib_base_cflipsign( v, -1.0 );
+        printf( "cflipsign(%lf + %lfi, %lf) = %lf + %lfi\n", creal( v ), cimag( v ), -1.0, creal( y ), cimag( y ) );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -149,7 +243,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -193,7 +287,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -211,9 +305,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/ops/cneg]: https://github.com/stdlib-js/math-base-ops-cneg/tree/esm
+[@stdlib/math/base/ops/cneg]: https://github.com/stdlib-js/math-base-ops-cneg
 
-[@stdlib/math/base/special/csignum]: https://github.com/stdlib-js/math-base-special-csignum/tree/esm
+[@stdlib/math/base/special/csignum]: https://github.com/stdlib-js/math-base-special-csignum
 
 <!-- </related-links> -->
 
