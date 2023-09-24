@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@esm/index.mjs';
+import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@v0.1.0-esm/index.mjs';
 ```
 
 #### cflipsign( z, y )
@@ -102,7 +102,7 @@ var im = imag( v );
 
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
-import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@esm/index.mjs';
+import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@v0.1.0-esm/index.mjs';
 
 var rand = uniform( -50.0, 50.0 );
 
