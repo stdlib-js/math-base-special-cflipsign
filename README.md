@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-cflipsign/tags). For example,
+
+```javascript
 import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@v0.2.0-deno/mod.js';
 ```
 
@@ -97,7 +102,7 @@ var im = imag( v );
 ```javascript
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@deno/mod.js';
-import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@v0.2.0-deno/mod.js';
+import cflipsign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cflipsign@deno/mod.js';
 
 var rand = uniform( -50.0, 50.0 );
 
