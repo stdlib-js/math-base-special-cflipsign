@@ -18,8 +18,8 @@
 
 #include "stdlib/math/base/special/cflipsign.h"
 #include "stdlib/math/base/assert/is_negative_zero.h"
-#include "stdlib/complex/float64.h"
-#include "stdlib/complex/reim.h"
+#include "stdlib/complex/float64/ctor.h"
+#include "stdlib/complex/float64/reim.h"
 
 /**
 * Returns a double-precision complex floating-point number with the same magnitude as `z` and the sign of `y*z`.
@@ -29,7 +29,7 @@
 * @return        result
 *
 * @example
-* #include "stdlib/complex/float64.h"
+* #include "stdlib/complex/float64/ctor.h"
 * #include "stdlib/complex/real.h"
 * #include "stdlib/complex/imag.h"
 *
@@ -47,7 +47,7 @@ stdlib_complex128_t stdlib_base_cflipsign( const stdlib_complex128_t z, const do
 	double re;
 	double im;
 
-	stdlib_reim( z, &re, &im );
+	stdlib_complex128_reim( z, &re, &im );
 
 	if ( y < 0 || stdlib_base_is_negative_zero( y ) ) {
 		re = -re;

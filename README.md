@@ -78,7 +78,7 @@ var cflipsign = require( '@stdlib/math-base-special-cflipsign' );
 Returns a double-precision complex floating-point number with the same magnitude as `z` and the sign of `y*z`.
 
 ```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var real = require( '@stdlib/complex-real' );
 var imag = require( '@stdlib/complex-imag' );
 
@@ -114,7 +114,7 @@ var im = imag( v );
 
 ```javascript
 var uniform = require( '@stdlib/random-base-uniform' ).factory;
-var Complex128 = require( '@stdlib/complex-float64' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var cflipsign = require( '@stdlib/math-base-special-cflipsign' );
 
 var rand = uniform( -50.0, 50.0 );
@@ -164,7 +164,7 @@ for ( i = 0; i < 100; i++ ) {
 Returns a double-precision complex floating-point number with the same magnitude as `z` and the sign of `y*z`.
 
 ```c
-#include "stdlib/complex/float64.h"
+#include "stdlib/complex/float64/ctor.h"
 #include "stdlib/complex/real.h"
 #include "stdlib/complex/imag.h"
 
@@ -208,8 +208,8 @@ stdlib_complex128_t stdlib_base_cflipsign( const stdlib_complex128_t z, const do
 
 ```c
 #include "stdlib/math/base/special/cflipsign.h"
-#include "stdlib/complex/float64.h"
-#include "stdlib/complex/reim.h"
+#include "stdlib/complex/float64/ctor.h"
+#include "stdlib/complex/float64/reim.h"
 #include <stdio.h>
 
 int main( void ) {
@@ -230,8 +230,8 @@ int main( void ) {
     for ( i = 0; i < 4; i++ ) {
         v = x[ i ];
         y = stdlib_base_cflipsign( v, -1.0 );
-        stdlib_reim( v, &re1, &im1 );
-        stdlib_reim( y, &re2, &im2 );
+        stdlib_complex128_reim( v, &re1, &im1 );
+        stdlib_complex128_reim( y, &re2, &im2 );
         printf( "cflipsign(%lf + %lfi, %lf) = %lf + %lfi\n", re1, im1, -1.0, re2, im2 );
 }
 ```
