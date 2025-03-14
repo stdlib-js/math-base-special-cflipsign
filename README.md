@@ -260,7 +260,7 @@ int main( void ) {
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/math-base/ops/cneg`][@stdlib/math/base/ops/cneg]</span><span class="delimiter">: </span><span class="description">negate a double-precision complex floating-point number.</span>
+-   <span class="package-name">[`@stdlib/complex-float64/base/neg`][@stdlib/complex/float64/base/neg]</span><span class="delimiter">: </span><span class="description">negate a double-precision complex floating-point number.</span>
 -   <span class="package-name">[`@stdlib/math-base/special/csignum`][@stdlib/math/base/special/csignum]</span><span class="delimiter">: </span><span class="description">evaluate the signum function of a double-precision complex floating-point number.</span>
 
 </section>
@@ -293,7 +293,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -341,7 +341,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/ops/cneg]: https://github.com/stdlib-js/math-base-ops-cneg
+[@stdlib/complex/float64/base/neg]: https://github.com/stdlib-js/complex-float64-base-neg
 
 [@stdlib/math/base/special/csignum]: https://github.com/stdlib-js/math-base-special-csignum
 
