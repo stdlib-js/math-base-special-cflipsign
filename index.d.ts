@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2023 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,23 +16,18 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var addon = require( './../src/addon.node' );
-
-
-// MAIN //
+import { Complex128 } from '@stdlib/types/complex';
 
 /**
 * Returns a double-precision complex floating-point number with the same magnitude as `z` and the sign of `y*z`.
 *
-* @private
-* @param {Complex128} z - complex number
-* @param {number} y - number from which to derive the sign
-* @returns {Complex128} result
+* @param z - input value
+* @param y - number from which to derive the sign
+* @returns result
 *
 * @example
 * var Complex128 = require( '@stdlib/complex-float64-ctor' );
@@ -48,12 +43,9 @@ var addon = require( './../src/addon.node' );
 * var im = imag( v );
 * // returns -5.5
 */
-function cflipsign( z, y ) {
-	var v = addon( z, y );
-	return new Complex128( v.re, v.im );
-}
+declare function cflipsign( z: Complex128, y: number ): Complex128;
 
 
 // EXPORTS //
 
-module.exports = cflipsign;
+export = cflipsign;
