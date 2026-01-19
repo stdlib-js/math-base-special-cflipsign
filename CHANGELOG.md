@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-30)
+## Unreleased (2026-01-19)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`7188b0d`](https://github.com/stdlib-js/stdlib/commit/7188b0d35d337eba56bd34d4970b2c852f25ebf9) - **docs:** improve doctests for complex number instances in `math/base/special/cflipsign` [(#9815)](https://github.com/stdlib-js/stdlib/pull/9815) _(by Vishal Gaikwad)_
 -   [`7673be5`](https://github.com/stdlib-js/stdlib/commit/7673be52049ca31548ebfbd14ebc63147a69775d) - **bench:** fix `NaN` check to use imaginary part _(by Karan Anand)_
 -   [`630ddb7`](https://github.com/stdlib-js/stdlib/commit/630ddb777824b5f6e501fda6dadf4ce41dccb964) - **test:** replace equal with strictEqual _(by Karan Anand)_
 -   [`8a365fc`](https://github.com/stdlib-js/stdlib/commit/8a365fcdd9eb22d5818e44f7447b77345deb1b1e) - **bench:** refactor random number generation `math/base/special/cexp*` [(#5888)](https://github.com/stdlib-js/stdlib/pull/5888) _(by Saurabh Singh, Athan Reines, stdlib-bot)_
@@ -30,13 +31,14 @@
 
 ### Contributors
 
-A total of 5 people contributed to this release. Thank you to the following contributors:
+A total of 6 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Gururaj Gurram
 -   Karan Anand
 -   Philipp Burckhardt
 -   Saurabh Singh
+-   Vishal Gaikwad
 
 </section>
 
